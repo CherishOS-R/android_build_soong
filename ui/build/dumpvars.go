@@ -148,17 +148,7 @@ var BannerVars = []string{
 
 func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
-   fmt.Fprintln(b,"---------------------------------------------------")
-  	fmt.Fprintln(b,"     __                         __      __         ")
-  	fmt.Fprintln(b,"   / ____| |             (_)   | |    / __ \       ")
- 	fmt.Fprintln(b,"  | |    | |__   ___ _ __ _ ___| |__ | \  / |___   ")
- 	fmt.Fprintln(b,"  | |    | '_ \ / _ \ '__| / __| '_ \| |  | / __|  ")
-	fmt.Fprintln(b,"  | |____| | | |  __/ |  | \__ \ | | | /__\ \__ \  ")
- 	fmt.Fprintln(b,"   \_____|_| |_|\___|_|  |_|___/_| |_|\____/|___/  ")
- 	fmt.Fprintln(b,"                                                   ")
- 	fmt.Fprintln(b,"                     CherishOS                     ")
-  	fmt.Fprintln(b,"                  by hungphan2001                  ")
-  	fmt.Fprintln(b,"---------------------------------------------------")
+   fmt.Fprintln(b, "============================================")
 	for _, name := range BannerVars {
 		if make_vars[name] != "" {
 			fmt.Fprintf(b, "%s=%s\n", name, make_vars[name])
